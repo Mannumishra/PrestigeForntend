@@ -1,0 +1,327 @@
+.WELCOMEsection {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    text-align: start;
+    letter-spacing: 1px;
+}
+
+.sectionforbusiness {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 170px;
+    margin-right: 170px;
+    gap: 200px;
+    flex-wrap: wrap;
+
+}
+
+.sectionforbusiness2 {
+    margin-top: 50px;
+    display: flex;
+    margin-left: 170px;
+    margin-right: 170px;
+    gap: 245px;
+    flex-wrap: wrap;
+}
+
+.sectionchilddiv {
+    line-height: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imageheight {
+    height: 50px;
+    /* margin-left: 40px; */
+}
+
+.sectionbuspara {
+    margin-top: 15px;
+    text-align: center;
+    color: #555;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.secondpara {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.productheading {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.sectionrange {
+    background-color: #f3f3f3;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.ProductRenageMain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.ProductRenagechild {
+    height: auto;
+    width: 31%;
+    border: 0.5px solid #504f4f;
+}
+
+.imagerange {
+    text-align: center;
+    height: 270px;
+    width: 100%;
+    object-fit: cover;
+    background-image: url("https://2.wlimg.com/product_images/bc-small/dir_100/2990960/custom-wiring-harness-1218733.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.imagerange::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.299);
+}
+
+.imagerange .img-parent{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+    left: 0%;
+    z-index: 999;
+}
+
+.productrangeheading {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+}
+
+.productrangepara {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+.secondchild {
+    padding: 10px;
+}
+
+.Infrastructuremain {
+    display: flex;
+    gap: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+.Infrastructurechild {
+    border: 1px solid black;
+}
+
+.insfrastuctureimage {
+    height: 180px;
+}
+
+.Unitmain {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    display: flex;
+    gap: 40px;
+}
+
+.unitmainsection {
+    margin-top: 100px;
+    background-image: url('https://catalog.wlimg.com/templates-images/12569/12570/vis-mis-bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Unitchild {
+    background-color: white;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.unitheading {
+    text-align: center;
+    color: #00abed;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.unitimage {
+    height: 70px;
+
+}
+
+.formsection {
+    padding: 70px;
+}
+
+.formmaindiv {
+    display: flex;
+    gap: 40px;
+}
+
+.formdivchild {
+    background-color: #333333;
+    color: white;
+    padding: 50px;
+
+}
+
+.size {
+    font-size: 25px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: #f3f3f3;
+    color: #333333;
+}
+
+.spantext {
+    font-size: 15px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .ProductRenageMain {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+    .ProductRenagechild {
+        height: auto;
+        width: 100%;
+        border: 0.5px solid #504f4f;
+    }
+    .WELCOMEsection {
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .heading {
+        text-align: start;
+        font-size: 15px;
+        font-weight:700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    
+.paragraph {
+    text-align: start;
+    letter-spacing: 0px;
+    font-size: 13px;
+}
+.sectionforbusiness {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 10px; */
+    margin: 0 auto;
+    margin-right: 0px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.sectionforbusiness2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-right: 0px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.Infrastructuremain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    gap: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.insfrastuctureimage {
+    height: 160px;
+}
+.Unitmain {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.formmaindiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.formdivchild {
+    background-color: #333333;
+    color: white;
+    padding: 5px;
+}
+.formsection {
+    padding: 10px;
+}
+}

@@ -1,0 +1,34 @@
+.contactPage {
+    padding: 10px 50px 20px 50px;
+}
+
+.contactusspan {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.iconsizecontact {
+    font-size: 22px;
+    color: #333;
+}
+
+.contactformdiv {
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .contactformdiv {
+        background-color: rgba(0, 0, 0, 0.06);
+        padding: 0px;
+    }
+    .contactPage {
+        padding: 2px 5px 20px 5px;
+    }
+    .contactusspan {
+        margin-left: 10px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}

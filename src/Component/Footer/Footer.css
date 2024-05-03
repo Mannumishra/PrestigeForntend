@@ -1,0 +1,122 @@
+.footersection {
+    background: #333333 url(//catalog.wlimg.com/templates-images/12569/12570/footer_pattern.png);
+    color: white;
+}
+
+.footermaindiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    color: white;
+}
+
+.inputtext {
+    height: 40px;
+    width: 350px;
+    background-color: #333333;
+    border: 1px solid white;
+}
+
+.button {
+    background-color: #00abed;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 100px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footersecondmain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.secondchilddiv {
+    height: 300px;
+    width: 300px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Childfirst {
+    display: flex;
+    gap: 70px;
+    font-size: 13px;
+}
+
+.childseccond {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.footerheading {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footerimage {
+    height: 200px;
+    border-radius: 10px
+}
+
+@media only screen and (max-width: 600px) {
+    .footermaindiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 10px;
+        color: white;
+    }
+
+    .inputtext {
+        height: 40px;
+        width: 100%;
+        background-color: #333333;
+        margin-bottom: 5px;
+        border: 1px solid white;
+    }
+
+    .footersecondmain {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        padding: 10px;
+    }
+
+    .secondchilddiv {
+        height: 100px;
+        width: 100px;
+        border: 1px solid white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerimage {
+        height: 70px;
+        border-radius: 10px
+    }
+    .footerheading {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .Childfirst {
+        display: flex;
+        gap: 50px;
+        font-size: 10px;
+    }
+    .childseccond {
+        display: flex;
+        gap: 20px;
+        font-size: 10px;
+    }
+}

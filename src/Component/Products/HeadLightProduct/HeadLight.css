@@ -1,0 +1,196 @@
+.headlightsection {
+    padding: 10px 50px;
+}
+
+.headlightheanding {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.firstdiv {
+    border: 1px solid #33333341;
+    padding: 20px;
+    display: flex;
+    gap: 70px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1),
+        -3px -3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.firstdivfirstchild {
+    width: 35%;
+    /* background-color: rgba(0, 0, 0, 0.189); */
+}
+.firstdivsecchild{
+    width: 65%;
+}
+
+.seconddivheading {
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.btnfirst {
+    border: 1px solid #00abed;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1px 5px;
+    margin-bottom: 20px;
+}
+
+.btnfirst:hover {
+    background-color: #00abed;
+    color: white;
+}
+
+.divfirstclass {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #3333334c;
+    margin-bottom: 15px;
+    padding: 10px;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+.headtext {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #333333c4;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.headtextnext {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #333;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.LinkHover {
+    color: #00abed;
+}
+
+.LinkHover:hover {
+    color: #333;
+}
+
+.headingpreferrd {
+    color: #00abed;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.butttnhead {
+    display: flex;
+    gap: 5px;
+}
+.btnbtnheadfirst{
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    border: 1px solid  #00abed;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.btnbtnheadsecond{
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #00abed;
+    border: 0px;
+    color: white;
+}
+.btnbtnheadfirst:hover{
+  background-color: #00abed;
+   color: white;
+}
+.btnbtnheadsecond:hover{
+    background-color: #333;
+}
+.seconddiv{
+    padding: 0px 20px;
+    display: flex;
+    gap: 70px;
+}
+.seconddivmain{
+    border: 1px solid #33333341;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1),
+    -3px -3px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+.headingproductdetails{
+    padding: 5px 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.productdetailspara{
+    padding: 2px 20px;
+    font-size: 14px;
+}
+.btnbtnheadthird{
+    margin-left: 40%;
+    margin-bottom: 50px;
+    width: 25%;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #00abed;
+    border: 0px;
+    color: white;
+}
+.seconddivwidth{
+    width: "50%"
+}
+@media only screen and (max-width: 600px) {
+    .firstdivfirstchild {
+        width: 90%;
+        /* background-color: rgba(0, 0, 0, 0.189); */
+    }
+    .firstdivsecchild{
+        width: 100%;
+    }
+    .firstdiv {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;  
+    }
+    .seconddiv{
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btnbtnheadthird{
+        margin-left: 10px;
+        margin-bottom: 50px;
+        width: 90%;
+        padding: 10px;
+        /* text-transform: uppercase;
+        font-weight: 600;
+        border-radius: 5px;
+        background-color: #00abed;
+        border: 0px;
+        color: white; */
+    }
+    .seconddivwidth{
+        width: "100%"
+    }
+    .divfirstclass {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* border-bottom: 1px solid #3333334c;
+        margin-bottom: 15px;
+        padding: 10px;
+        justify-content: baseline;
+        align-items: baseline; */
+    }
+}
