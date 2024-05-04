@@ -101,7 +101,7 @@ const Home = () => {
               <div className='ProductRenagechild'>
                 <div className='imagerange'>
                   <div className="img-parent">
-                    <Link to={`/categoryproductdetails/${item._id}`}> <img src={item.image} alt="" style={{ height: 230 }} /></Link>
+                    <Link to={`/categoryproductdetails/${item._id}`}> <img src={item.image} alt="" style={{ height: 230 ,width:"90%" }} /></Link>
                   </div>
                 </div>
                 <div className='secondchild'>

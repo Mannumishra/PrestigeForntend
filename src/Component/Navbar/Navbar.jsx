@@ -13,9 +13,20 @@ const Navbar = () => {
     const handleMouseLeave = () => {
         setIsDropdownOpen(false);
     };
+    // const handleDropdownToggle = () => {
+    //     setIsDropdownOpen(!isDropdownOpen);
+    // };
     const handleDropdownToggle = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
+
+    const closeNavbarOnMobile = () => {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        if (window.innerWidth < 992) { // assuming 992px is the breakpoint for mobile
+            navbarToggler.click(); // simulate click on navbar-toggler button to close the navbar
+        }
+    };
+
 
     const getApiCategoryData = async () => {
         let res = await axios.get("https://prestigebackend.onrender.com/api/category")
@@ -44,60 +55,52 @@ const Navbar = () => {
                 </div>
             </div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light " style={{ position: "absolute", position: "fixed", top: "60px", width: "100%", zIndex: "999",padding:10 }}>
-                <div>
-                   <Link to="/"> <img src="https://catalog.wlimg.com/1/2990960/other-images/12569-comp-image.png" alt="" className='navbarimage' /></Link>
-                </div>
-                <div className="container-fluid">
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse navbaralllink" id="navbarNavDropdown">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/about">About Us</Link>
-                            </li>
-                            <li className="nav-item dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleDropdownToggle}>
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded={isDropdownOpen}>
-                                    Products
-                                </a>
-                                <div className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`} aria-labelledby="navbarDropdownMenuLink">
-                                    {
-                                        data.map((item, index) =>
-                                            <ul className="parent-list">
-                                                <li><Link className="dropdown-item" to={`categoryproductdetails/${item._id}`}>{item.categoryname}</Link>
-                                                    {/* <ul className="child-list">
-                                                        <li><a href="#"></a></li>
-                                                        <li><a href="#">dfgh</a></li>
-                                                        <li><a href="#">dfgh</a></li>
-                                                        <li><a href="#">dfgh</a></li>
-                                                        <li><a href="#">dfgh</a></li>
-                                                        <li><a href="#">dfgh</a></li>
-                                                    </ul> */}
-                                                </li>
-                                            </ul>
-                                        )
-                                    }
+            <div>
+                <Link to="/"> <img src="https://catalog.wlimg.com/1/2990960/other-images/12569-comp-image.png" alt="" className='navbarimage' /></Link>
+            </div>
+            <div className="container-fluid">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse navbaralllink" id="navbarNavDropdown">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <Link className="nav-link active" aria-current="page" to="/" onClick={closeNavbarOnMobile}>Home</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/about" onClick={closeNavbarOnMobile}>About Us</Link>
+                        </li>
+                        <li className="nav-item dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded={isDropdownOpen} >
+                                Products
+                            </a>
+                            <div className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`} aria-labelledby="navbarDropdownMenuLink">
+                                {
+                                    data.map((item, index) =>
+                                        <ul className="parent-list">
+                                            <li><Link className="dropdown-item" to={`categoryproductdetails/${item._id}`} onClick={closeNavbarOnMobile}>{item.categoryname}</Link>
+                                            </li>
+                                        </ul>
+                                    )
+                                }
 
-                                </div>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/infra">Infrastructure</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/contact">Contact us</Link>
-                            </li>
-                        </ul>
-                    </div>
+                            </div>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/infra" onClick={closeNavbarOnMobile}>Infrastructure</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/contact" onClick={closeNavbarOnMobile}>Contact us</Link>
+                        </li>
+                    </ul>
                 </div>
-                <div className='call' style={{ display: "flex", gap: 10 }}>
-                    <i className="ri-customer-service-line fssizee"></i><p className='navbartopheanding'>9999196748
-                        <br /> Call Us
-                    </p>
-                </div>
-            </nav>
+            </div>
+            <div className='call' style={{ display: "flex", gap: 10 }}>
+                <i className="ri-customer-service-line fssizee"></i><p className='navbartopheanding'>9999196748
+                    <br /> Call Us
+                </p>
+            </div>
+        </nav>
         </>
     );
 };
