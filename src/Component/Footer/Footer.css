@@ -115,6 +115,10 @@
         gap: 50px;
         font-size: 10px;
     }
+   /* .textdeco{
+    text-decoration: none !important;
+    color: white !important;
+   } */
     .childseccond {
         display: flex;
         gap: 20px;

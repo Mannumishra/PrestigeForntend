@@ -35,7 +35,7 @@ const CategoryproductDetails = () => {
     return (
         <>
     <div style={{marginTop:160}}></div>
-            <div className='categorydivmain'>
+            {/* <div className='categorydivmain'>
                 <div>
                 <div className='cateimginside'>
                         <div><img src={data.image2} alt="" style={{ height: 300, borderRadius: 10 }} /></div>
@@ -48,6 +48,19 @@ const CategoryproductDetails = () => {
                 <div className='cateimg'>
                     <div><img src={data.image} alt="" style={{ height: 300, borderRadius: 10 }} /></div>
                     <div><img src={data.image1} alt="" style={{ height: 300, borderRadius: 10 }} /></div>
+                </div>
+            </div> */}
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-6">
+                    <img src={data.image3} alt="" style={{ height: 300, borderRadius: 10 }} />
+                    <img src={data.image1} alt="" style={{ height: 300, borderRadius: 10 }} />
+                    <img src={data.image} alt="" style={{ height: 300, borderRadius: 10 }} />
+                    </div>
+                    <div className="col-md-6">
+                    <p className='Headingcategory'>What is the <span style={{ color: "blue" }}>{data.categoryname}</span>?</p>
+                    <p className='questionanswer'>{data.description}</p>
+                    </div>
                 </div>
             </div>
             <div className='mb-4'>

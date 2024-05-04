@@ -3,8 +3,8 @@ import './About.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 const AboutUs = () => {
-    const [data,setData] = useState([])
-    const getApiData = async()=>{
+    const [data, setData] = useState([])
+    const getApiData = async () => {
         try {
             let res = await axios.get("https://prestigebackend.onrender.com/api/category")
             setData(res.data.data)
@@ -13,11 +13,17 @@ const AboutUs = () => {
         }
     }
     useEffect(()=>{
-getApiData()
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        })
     },[])
+    useEffect(() => {
+        getApiData()
+    }, [])
     return (
         <>
-        <div style={{marginTop:160}}></div>
+            <div style={{ marginTop: 160 }}></div>
             <section>
                 <div className="mainaboutdiv">
                     <div className="childabout1">
@@ -52,8 +58,8 @@ getApiData()
                             <ul class="list-group">
                                 <li class="list-group-item headingtextside">Products</li>
                                 {
-                                    data.map((item,index)=>
-                                        <li class="list-group-item aboutsidetext"><Link to={`/categoryproductdetails/${item._id}`} style={{textDecoration:"none",color:"black"}}>{item.categoryname}</Link></li>
+                                    data.map((item, index) =>
+                                        <li class="list-group-item aboutsidetext"><Link to={`/categoryproductdetails/${item._id}`} style={{ textDecoration: "none", color: "black" }}>{item.categoryname}</Link></li>
                                     )
                                 }
                             </ul>

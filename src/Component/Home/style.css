@@ -20,11 +20,9 @@
 .sectionforbusiness {
     margin-top: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-left: 170px;
-    margin-right: 170px;
-    gap: 200px;
+    gap: 190px;
     flex-wrap: wrap;
 
 }
@@ -32,9 +30,9 @@
 .sectionforbusiness2 {
     margin-top: 50px;
     display: flex;
-    margin-left: 170px;
-    margin-right: 170px;
-    gap: 245px;
+    justify-content: center;
+    align-items: center;
+    gap: 225px;
     flex-wrap: wrap;
 }
 
@@ -45,9 +43,17 @@
     gap: 5px;
     align-items: center;
     justify-content: center;
-
 }
 
+.sectionchilddiv1 {
+    margin-left: 15px;
+    line-height: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
 .imageheight {
     height: 50px;
     /* margin-left: 40px; */

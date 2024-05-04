@@ -31,7 +31,7 @@ const Navbar = () => {
         <>
             <div className='navbardivfirst fixed-top'>
                 <div>
-                    <p className='navbartopheanding'>Address: Bawana Delhi, GST No. 987654567</p>
+                    <p className='navbartopheanding'>Address: Bawana Delhi, GST No. 07AJZPK8722F1ZO</p>
                 </div>
                 <div className='icon-container'>
                     <div className='icon-containerdiv'><i className="ri-mail-line fssizeee"></i></div><span className='navbaespantext'>Send mail</span>
@@ -93,7 +93,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='call' style={{ display: "flex", gap: 10 }}>
-                    <i className="ri-customer-service-line fssizee"></i><p className='navbartopheanding'>08048779557
+                    <i className="ri-customer-service-line fssizee"></i><p className='navbartopheanding'>9999196748
                         <br /> Call Us
                     </p>
                 </div>

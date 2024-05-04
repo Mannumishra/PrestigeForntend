@@ -13,6 +13,12 @@ const Home = () => {
       console.log(error);
     }
   }
+  useEffect(()=>{
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
+},[])
   useEffect(() => {
     getApiData()
   }, [])
@@ -66,12 +72,12 @@ const Home = () => {
           </div>
         </div>
         <div className='sectionforbusiness2'>
-          <div className='sectionchilddiv'>
+          <div className='sectionchilddiv1'>
             <img src="./image/market.png" alt="" className='imageheight' />
             <p className='sectionbuspara'>Market Covered</p>
             <p className='secondpara'>India</p>
           </div>
-          <div className='sectionchilddiv'>
+          <div className='sectionchilddiv1'>
             <img src="./image/ceo.png" alt="" className='imageheight' />
             <p className='sectionbuspara'>Name of CEO</p>
             <p className='secondpara'>Mr. Shyam Sunder Kalra</p>
@@ -89,14 +95,13 @@ const Home = () => {
           <p className='productheading'>Product <span style={{ color: "#00abed" }}>Category</span> </p>
         </div>
         <div className="ProductRenageMain">
-        {
-          cateprod.map((item, index) =>
-         
+          {
+            cateprod.map((item, index) =>
+
               <div className='ProductRenagechild'>
                 <div className='imagerange'>
                   <div className="img-parent">
                     <Link to={`/categoryproductdetails/${item._id}`}> <img src={item.image} alt="" style={{ height: 230 }} /></Link>
-                    {/* <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/custom-wiring-harness-1218733.jpg" alt="" /> */}
                   </div>
                 </div>
                 <div className='secondchild'>
@@ -104,43 +109,11 @@ const Home = () => {
                   {/* <p className='productrangepara'>{item.description}</p> */}
                 </div>
               </div>
-           
-          )
-        }
-        {/* <div className="ProductRenagechild">
-            <div className='imagerange'>
-              <div className="img-parent">
-                <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/wiring-assemblies-1218730.jpg" alt="" />
-              </div>
-            </div>
-            <div className='secondchild'>
-              <p className='productrangeheading'>Tail Light holder</p>
-              <p className='productrangepara'>We are presenting different assortments of Tail Light Holder in different lengths and...</p>
-            </div>
-          </div>
-          <div className="ProductRenagechild">
-            <div className='imagerange'>
-              <div className="img-parent">
-                <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/tail-light-holder-1218728.jpg" alt="" />
-              </div>
-            </div>
-            <div className='secondchild'>
-              <p className='productrangeheading'>Wiring Assemblies</p>
-              <p className='productrangepara'>We are counted amongst the leading Manufacturers and Suppliers of Wiring Assemblies in India. We...</p>
-            </div>
-          </div>
-          <div className="ProductRenagechild">
-            <div className='imagerange'>
-              <div className="img-parent">
-                <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/head-light-holders-1218724.jpg" alt="" />
-              </div>
-            </div>
-            <div className='secondchild'>
-              <p className='productrangeheading'>custom wiring harness</p>
-              <p className='productrangepara'>If you are looking for Custom Wiring Harness, then you can contact us. Our company has carved a...</p>
-            </div>
-          </div> */}
- </div>
+
+            )
+          }
+
+        </div>
       </section>
       {/* </div> */}
       <section>

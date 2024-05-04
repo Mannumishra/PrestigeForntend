@@ -1,14 +1,15 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
     <>
       <section className='footersection'>
-        <div style={{ position: "absolute", right: 10, bottom: 100, cursor: "pointer" ,position:"fixed",zIndex:999 }}>
+        <div style={{ position: "absolute", right: 10, bottom: 100, cursor: "pointer", position: "fixed", zIndex: 999 }}>
           <img src="./image/whatsapp-fill.png" alt="" style={{ height: 50 }} />
         </div>
-        <div style={{ position: "absolute", right: 10, bottom: 150, cursor: "pointer" ,position:"fixed",zIndex:999 }}>
+        <div style={{ position: "absolute", right: 10, bottom: 150, cursor: "pointer", position: "fixed", zIndex: 999 }}>
           <img src="./image/file-pdf-2-fill.png" alt="" style={{ height: 50 }} />
         </div>
         <div className='footermaindiv'>
@@ -33,41 +34,31 @@ const Footer = () => {
             <p className='footerheading'>General Links</p>
             <div className='Childfirst'>
               <div>
-                <p>Home</p>
-                <p>Product</p>
-                <p>Contact us </p>
+
+                <Link to="/" style={{ color: "white" }} className='textdeco'><p>Home</p></Link>
+                <Link to="/contact" style={{ color: "white" }}><p>Contact us</p></Link>
+                <p>Site Map</p>
               </div>
               <div>
-                <p>About us </p>
-                <p>Infrastructure</p>
-                <p>Site Map</p>
+                <Link to="/about" style={{ color: "white" }}><p>About</p></Link>
+                <Link to="/infra" style={{ color: "white" }}><p>Infrastructure</p></Link>
+                {/* <p>Site Map</p> */}
               </div>
             </div>
             <p className='footerheading'>Product</p>
             <div className='childseccond'>
-
               <div>
-                <p>Head light holder</p>
-                <p>Wiring Assemblies</p>
+                <Link style={{ color: "white" }}>  <p>Wiring Harnesh</p></Link>
+                <Link style={{ color: "white" }}>  <p>Wiring Assembly</p></Link>
               </div>
               <div>
-                <p>Tail Light Holder</p>
-                <p>Custom Wriing </p>
-                <p>Harness</p>
+                <Link style={{ color: "white" }}><p>Automotiv Connector</p></Link>
               </div>
             </div>
           </div>
           <div>
             <img src="../image/2.jpg" alt="" />
           </div>
-          {/* <div>
-            <input type="text" name="" id="" placeholder='Your Email Adderss' className='inputtext' /><button className='button'>Subcribe</button>
-          </div> */}
-          {/* <div>
-            <i class="ri-facebook-box-fill fssize"></i>
-            <i class="ri-twitter-fill fssize"></i>
-            <i class="ri-instagram-line fssize"></i>
-          </div> */}
         </div>
       </section>
     </>
