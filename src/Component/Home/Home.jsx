@@ -7,7 +7,7 @@ const Home = () => {
 
   const getApiData = async () => {
     try {
-      let res = await axios.get("http://localhost:8000/api/category")
+      let res = await axios.get("https://prestigebackend.onrender.com/api/category")
       setCateprod(res.data.data)
     } catch (error) {
       console.log(error);

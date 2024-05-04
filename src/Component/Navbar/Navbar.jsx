@@ -18,7 +18,7 @@ const Navbar = () => {
     };
 
     const getApiCategoryData = async () => {
-        let res = await axios.get("http://localhost:8000/api/category")
+        let res = await axios.get("https://prestigebackend.onrender.com/api/category")
         // console.log(res);
         console.log(res)
         setData(res.data.data)

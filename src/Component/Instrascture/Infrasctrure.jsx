@@ -15,7 +15,7 @@ const Infrasctrure = () => {
     const [data,setData] = useState([])
     const getApiData = async()=>{
         try {
-            let res = await axios.get("http://localhost:8000/api/category")
+            let res = await axios.get("https://prestigebackend.onrender.com/api/category")
             setData(res.data.data)
         } catch (error) {
             console.log(error);
