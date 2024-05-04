@@ -42,6 +42,7 @@ const Footer = () => {
               <div>
                 <Link to="/about" style={{ color: "white" }}><p>About</p></Link>
                 <Link to="/infra" style={{ color: "white" }}><p>Infrastructure</p></Link>
+                <Link to="/#" style={{ color: "white" }}><p>Career</p></Link>
                 {/* <p>Site Map</p> */}
               </div>
             </div>
