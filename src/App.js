@@ -1,4 +1,5 @@
 import React from "react";
+import toast, { Toaster } from 'react-hot-toast';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Component/Navbar/Navbar";
 import Footer from "./Component/Footer/Footer";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/categoryproductdetails/:_id" element={<CategoryproductDetails />} />
           <Route path="/productDetails/:_id" element={<HeadlightProduct />} />
         </Routes>
+        <Toaster />
         <Footer />
       </BrowserRouter>
     </>

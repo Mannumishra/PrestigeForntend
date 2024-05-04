@@ -198,13 +198,10 @@ const Home = () => {
                 <input type="email" className="form-control" id="inputtext4" placeholder='your email' />
               </div>
               <div className="col-md-6">
-                <select id="inputState" className="form-select">
-                  <option selected>India </option>
-                  <option>...</option>
-                </select>
-              </div>
-              <div className="col-md-6">
                 <input type="text" className="form-control" id="inputZip" placeholder='Phone number' />
+              </div>
+              <div className="col-md-12">
+                <input type="text" className="form-control" id="inputZip" placeholder='Enter Full Address' />
               </div>
               <div className="col-md-12">
                 <textarea name="" id="" cols="30" rows="3" className='form-control' placeholder='leave a message '></textarea>

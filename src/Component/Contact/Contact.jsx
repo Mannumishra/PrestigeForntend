@@ -1,15 +1,42 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./Contact.css"
+import axios from 'axios'
+import toast from 'react-hot-toast'
 const Contact = () => {
-    useEffect(()=>{
+
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        message: ""
+    })
+
+    const getInputData = (e) => {
+        const { name, value } = e.target
+        setData({ ...data, [name]: value })
+    }
+    const postdata = async (e) => {
+        e.preventDefault()
+        try {
+            let res = await axios.post("https://prestigebackend.onrender.com/api/contact", data)
+            if (res.status === 200) {
+                toast.success("Your Contact us save successfully !!!!")
+              window.location.reload()
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    useEffect(() => {
         window.scrollTo({
-            top:0,
-            behavior:"smooth"
+            top: 0,
+            behavior: "smooth"
         })
-    },[])
+    }, [])
     return (
-        <> <div style={{marginTop:160}}></div>
+        <> <div style={{ marginTop: 160 }}></div>
             <section className='contactPage'>
                 <p className='mainheading'>Prestige Industries</p>
                 <div className='divabloutredirect'><Link style={{ textDecoration: "none", color: "#333" }}>Home</Link> > Infrastructure</div>
@@ -24,24 +51,21 @@ const Contact = () => {
                     </div>
                     <div className='contactformdiv'>
                         <h5>Send us a <span style={{ color: "#00abed" }}>Message</span></h5>
-                        <form className="row g-3">
+                        <form className="row g-3" onSubmit={postdata}>
                             <div className="col-md-6">
-                                <input type="text" className="form-control" id="inputEmail4" placeholder='Your name' />
+                                <input type="text" className="form-control" name='name' id="inputEmail4" placeholder='Your name' onChange={getInputData} />
                             </div>
                             <div className="col-md-6">
-                                <input type="email" className="form-control" id="inputtext4" placeholder='your email' />
+                                <input type="email" className="form-control" name='email' id="inputtext4" placeholder='your email' onChange={getInputData} />
                             </div>
                             <div className="col-md-6">
-                                <select id="inputState" className="form-select">
-                                    <option selected>India </option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                            <div className="col-md-6">
-                                <input type="text" className="form-control" id="inputZip" placeholder='Phone number' />
+                                <input type="text" className="form-control" name='phone' id="inputZip" placeholder='Phone number' onChange={getInputData} />
                             </div>
                             <div className="col-md-12">
-                                <textarea name="" id="" cols="30" rows="3" className='form-control' placeholder='leave a message '></textarea>
+                                <input type="text" className="form-control" name='address' id="inputtext4" placeholder='Enter your full address' onChange={getInputData} />
+                            </div>
+                            <div className="col-md-12">
+                                <textarea name="" id="" cols="30" rows="3" name="message" className='form-control' onChange={getInputData} placeholder='leave a message '></textarea>
                             </div>
                             <div className="col-12">
                                 <button type="submit" className="btn btn-primary">Sign in</button>
