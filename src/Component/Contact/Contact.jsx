@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import "./Contact.css"
 const Contact = () => {
     return (
-        <>
+        <> <div style={{marginTop:160}}></div>
             <section className='contactPage'>
                 <p className='mainheading'>Prestige Industries</p>
                 <div className='divabloutredirect'><Link style={{ textDecoration: "none", color: "#333" }}>Home</Link> > Infrastructure</div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Infra.css"
 import { Link } from 'react-router-dom'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
@@ -10,9 +10,23 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import axios from 'axios';
 const Infrasctrure = () => {
+    const [data,setData] = useState([])
+    const getApiData = async()=>{
+        try {
+            let res = await axios.get("http://localhost:8000/api/category")
+            setData(res.data.data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    useEffect(()=>{
+getApiData()
+    },[])
     return (
         <>
+         <div style={{marginTop:160}}></div>
             <section>
                 <div className="mainaboutdiv">
                     <div className="childabout1">
@@ -40,10 +54,11 @@ const Infrasctrure = () => {
                         <div>
                             <ul class="list-group">
                                 <li class="list-group-item headingtextside">Products</li>
-                                <li class="list-group-item aboutsidetext">Head Light Holder</li>
-                                <li class="list-group-item aboutsidetext">Tail Light Holder</li>
-                                <li class="list-group-item aboutsidetext">Wiring Assemblies</li>
-                                <li class="list-group-item aboutsidetext">custom Wiring Harness</li>
+                                {
+                                    data.map((item,index)=>
+                                        <li class="list-group-item aboutsidetext"><Link to={`/categoryproductdetails/${item._id}`} style={{textDecoration:"none",color:"black"}}>{item.categoryname}</Link></li>
+                                    )
+                                }
                             </ul>
                         </div>
                         <div className='mt-2'>

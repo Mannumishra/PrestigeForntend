@@ -1,13 +1,29 @@
-import React from 'react'
+import React,{ useEffect, useState } from 'react'
 import './HeadLight.css'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import axios from 'axios';
 
 const HeadlightProduct = () => {
+  const { _id } = useParams()
+  const [data, setData] = useState({})
+  const getApiData = async () => {
+    try {
+      let res = await axios.get("http://localhost:8000/api/product/"+_id)
+      console.log(res);
+      setData(res.data.data)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(()=>{
+    getApiData()
+  },[])
   return (
     <>
+    <div style={{marginTop:160}}></div>
       <section className='headlightsection'>
-        <p className='headlightheanding'>Head Light Holder</p>
-        <div className='divabloutredirect'><Link style={{ textDecoration: "none", color: "#333" }}>Home</Link> > Product > Head Light Holders</div>
+        <p className='headlightheanding'>{data.categoryname}</p>
+        <div className='divabloutredirect'><Link style={{ textDecoration: "none", color: "#333" }}>Home</Link> / Product / Head Light Holders</div>
         <div className='firstdiv'>
           <div className='firstdivfirstchild'>
             <div>
@@ -21,19 +37,19 @@ const HeadlightProduct = () => {
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/custom-wiring-harness-1218733.jpg" class="d-block w-100" alt="..." />
+                    <img src={data.image} class="d-block w-100" alt="..." />
                   </div>
                   <div class="carousel-item">
-                    <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/wiring-assemblies-1218730.jpg" class="d-block w-100" alt="..." />
+                    <img src={data.image2} class="d-block w-100" alt="..." />
                   </div>
                   <div class="carousel-item">
-                    <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/tail-light-holder-1218728.jpg" class="d-block w-100" alt="..." />
+                    <img src={data.image3}  class="d-block w-100" alt="..." />
                   </div>
                   <div class="carousel-item">
-                    <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/head-light-holders-1218724.jpg" class="d-block w-100" alt="..." />
+                    <img src={data.image1}  class="d-block w-100" alt="..." />
                   </div>
                   <div class="carousel-item">
-                    <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/custom-wiring-harness-1218733.jpg" class="d-block w-100" alt="..." />
+                    <img src={data.image}  class="d-block w-100" alt="..." />
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -47,19 +63,19 @@ const HeadlightProduct = () => {
               </div>
             </div>
             <div className='mt-1 d-flex gap-1'>
-              <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/custom-wiring-harness-1218733.jpg" height={100} className='w-100' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" alt="" />
-              <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/wiring-assemblies-1218730.jpg" height={100} className='w-100' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" alt="" />
+              {/* <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/custom-wiring-harness-1218733.jpg" height={100} className='w-100' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" alt="" />
+              <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/wiring-assemblies-1218730.jpg" height={100} className='w-100' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" alt="" /> */}
               {/* <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/tail-light-holder-1218728.jpg" height={100} className='w-100' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" alt="" /> */}
               {/* <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/head-light-holders-1218724.jpg" height={100} className='w-100' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" alt="" />
               <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/custom-wiring-harness-1218733.jpg" height={100} className='w-100' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" alt="" /> */}
             </div>
           </div>
           <div className='firstdivsecchild'>
-            <p className='seconddivheading'>Head Light Holders</p>
+            <p className='seconddivheading'>{data.subcategoryname}</p>
             <button className='btnfirst'>Get Best Price</button>
             <div className="divfirstclass">
               <div className='headtext'>Business Type</div>
-              <div className='headtextnext'> Manufacturer ,Supplier </div>
+              <div className='headtextnext'>{data.businesstype}</div>
             </div>
             <div className="divfirstclass" >
               <div className='headtext'> Type</div>
@@ -67,13 +83,13 @@ const HeadlightProduct = () => {
             </div>
             <div className="divfirstclass">
               <div className='headtext'>mterial</div>
-              <div className='headtextnext'> Glass Metal</div>
+              <div className='headtextnext'>{data.material}</div>
             </div>
             <div className="divfirstclass">
               <div className='headtext'>application</div>
-              <div className='headtextnext'> Automotive</div>
+              <div className='headtextnext'> {data.application}</div>
             </div>
-            <Link className='LinkHover'>Click to view More</Link>
+            {/* <Link className='LinkHover'>Click to view More</Link> */}
             <p className='headingpreferrd'>Preferred Buyer From</p>
             <div className="divfirstclass">
               <div className='headtext'>Location</div>
@@ -112,7 +128,7 @@ const HeadlightProduct = () => {
           <p className='productdetailspara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ut quod architecto distinctio quo placeat nesciunt vitae ipsa fuga doloribus enim aliquid, aut qui velit veritatis veniam dolor sunt necessitatibus repellendus. Recusandae a soluta, tempora quae quasi natus sunt laudantium molestiae aut vitae omnis id architecto ullam repellat? Porro natus exercitationem dolores fuga totam consequatur cumque reprehenderit aliquam, nesciunt labore sed accusamus..</p>
           <button className='btnbtnheadthird'>Yes! i am intersted</button>
         </div>
-        <div className='seconddivmain'>
+        {/* <div className='seconddivmain'>
           <p className='headingproductdetails text-center'>Looking for "Tail right holders"</p>
           <div className='seconddiv'>
             <div className='seconddivwidth'>
@@ -147,7 +163,7 @@ const HeadlightProduct = () => {
             <textarea name="" id="" cols="50" rows="2"></textarea>
           </div>
           <button className='btnbtnheadthird'>Send enquiry</button>
-        </div>
+        </div> */}
         <div className='seconddivmain'>
           <p className='headingproductdetails text-center'>Explore More Product</p>
           <div>

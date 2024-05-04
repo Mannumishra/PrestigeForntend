@@ -18,7 +18,7 @@ const Footer = () => {
           <div>
             <input type="text" name="" id="" placeholder='Your Email Adderss' className='inputtext' /><button className='button'>Subcribe</button>
           </div>
-          <div>
+          <div className=''>
             <i class="ri-facebook-box-fill fssize"></i>
             <i class="ri-twitter-fill fssize"></i>
             <i class="ri-instagram-line fssize"></i>
@@ -58,8 +58,16 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <img src="./image/2.jpg" alt="" />
+            <img src="../image/2.jpg" alt="" />
           </div>
+          {/* <div>
+            <input type="text" name="" id="" placeholder='Your Email Adderss' className='inputtext' /><button className='button'>Subcribe</button>
+          </div> */}
+          {/* <div>
+            <i class="ri-facebook-box-fill fssize"></i>
+            <i class="ri-twitter-fill fssize"></i>
+            <i class="ri-instagram-line fssize"></i>
+          </div> */}
         </div>
       </section>
     </>

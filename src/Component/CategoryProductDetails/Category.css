@@ -1,0 +1,82 @@
+.categorydivmain {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.Headingcategory {
+    font-size: 35px;
+    font-weight: 800;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.questionanswer {
+    font-size: 18px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    font-weight: 700;
+}
+
+.cateimg {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cateimginside {
+    display: flex;
+    gap: 20px;
+}
+
+.categoryproduct {
+    width: 18rem;
+    /* Set width of the card */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.534);
+    /* Add box shadow on all sides */
+    border: 1px solid rgba(0, 0, 0, 0.162);
+    padding: 10px
+}
+
+.catproimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cateproductstyle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+
+}
+
+@media screen and(max-width:768px) {
+    .cateproductstyle {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 20px;
+
+    }
+    .categorydivmain {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .cateimg {
+        display: flex;
+        flex-direction: row;
+        /* flex-direction: column; */
+        gap: 20px;
+    }
+    .cateimginside {
+        display: flex;
+        gap: 20px;
+    }
+}

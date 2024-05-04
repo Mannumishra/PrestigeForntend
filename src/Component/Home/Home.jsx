@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.css'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 const Home = () => {
+  const [cateprod, setCateprod] = useState([])
+
+  const getApiData = async () => {
+    try {
+      let res = await axios.get("http://localhost:8000/api/category")
+      setCateprod(res.data.data)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(() => {
+    getApiData()
+  }, [])
   return (
     <>
+      <div style={{ marginTop: 160 }}></div>
       <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -70,21 +86,28 @@ const Home = () => {
 
       <section className='sectionrange'>
         <div>
-          <p className='productheading'>Product <span style={{ color: "#00abed" }}>Renge</span> </p>
+          <p className='productheading'>Product <span style={{ color: "#00abed" }}>Category</span> </p>
         </div>
         <div className="ProductRenageMain">
-          <div className='ProductRenagechild'>
-            <div className='imagerange'>
-              <div className="img-parent">
-                <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/custom-wiring-harness-1218733.jpg" alt="" />
+        {
+          cateprod.map((item, index) =>
+         
+              <div className='ProductRenagechild'>
+                <div className='imagerange'>
+                  <div className="img-parent">
+                    <Link to={`/categoryproductdetails/${item._id}`}> <img src={item.image} alt="" style={{ height: 230 }} /></Link>
+                    {/* <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/custom-wiring-harness-1218733.jpg" alt="" /> */}
+                  </div>
+                </div>
+                <div className='secondchild'>
+                  <p className='productrangeheading'>{item.categoryname}</p>
+                  {/* <p className='productrangepara'>{item.description}</p> */}
+                </div>
               </div>
-            </div>
-            <div className='secondchild'>
-              <p className='productrangeheading'>Head Light Holders</p>
-              <p className='productrangepara'>We are offering wide assortment of head light holders, which are available in...</p>
-            </div>
-          </div>
-          <div className="ProductRenagechild">
+           
+          )
+        }
+        {/* <div className="ProductRenagechild">
             <div className='imagerange'>
               <div className="img-parent">
                 <img src="https://2.wlimg.com/product_images/bc-small/dir_100/2990960/wiring-assemblies-1218730.jpg" alt="" />
@@ -116,8 +139,8 @@ const Home = () => {
               <p className='productrangeheading'>custom wiring harness</p>
               <p className='productrangepara'>If you are looking for Custom Wiring Harness, then you can contact us. Our company has carved a...</p>
             </div>
-          </div>
-        </div>
+          </div> */}
+ </div>
       </section>
       {/* </div> */}
       <section>
