@@ -52,15 +52,16 @@ const CategoryproductDetails = () => {
             </div> */}
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6">
-                    <img src={data.image3} alt="" style={{ height: 300, borderRadius: 10 }} />
-                    <img src={data.image1} alt="" style={{ height: 300, borderRadius: 10 }} />
-                    <img src={data.image} alt="" style={{ height: 300, borderRadius: 10 }} />
-                    </div>
-                    <div className="col-md-6">
+                <div className="col-md-6">
                     <p className='Headingcategory'>What is the <span style={{ color: "blue" }}>{data.categoryname}</span>?</p>
                     <p className='questionanswer'>{data.description}</p>
                     </div>
+                    <div className="col-md-6">
+                    <img src={data.image3} alt="" style={{ height: 300, borderRadius: 10 ,width:"100%" }} />
+                    {/* <img src={data.image1} alt="" style={{ height: 300, borderRadius: 10 }} />
+                    <img src={data.image} alt="" style={{ height: 300, borderRadius: 10 }} /> */}
+                    </div>
+                 
                 </div>
             </div>
             <div className='mb-4'>
