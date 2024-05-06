@@ -79,7 +79,7 @@ const HeadlightProduct = () => {
             </div>
             <div className="divfirstclass" >
               <div className='headtext'> Type</div>
-              <div className='headtextnext'>Head Light Holders</div>
+              <div className='headtextnext'></div>
             </div>
             <div className="divfirstclass">
               <div className='headtext'>mterial</div>
@@ -164,7 +164,7 @@ const HeadlightProduct = () => {
           </div>
           <button className='btnbtnheadthird'>Send enquiry</button>
         </div> */}
-        <div className='seconddivmain'>
+       {/* <div className='seconddivmain'>
           <p className='headingproductdetails text-center'>Explore More Product</p>
           <div>
             <div>
@@ -182,7 +182,7 @@ const HeadlightProduct = () => {
               <div></div>
             </div>
           </div>
-        </div>
+      </div> */}
       </section>
     </>
   )
