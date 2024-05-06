@@ -40,6 +40,15 @@ const Contact = () => {
             <section className='contactPage'>
                 <p className='mainheading'>Prestige Industries</p>
                 <div className='divabloutredirect'><Link style={{ textDecoration: "none", color: "#333" }}>Home</Link> > Contact Us</div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12 mb-5">
+                            <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.9220102379063!2d77.05659207375982!3d28.781585777299522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07845afdbf7b%3A0x4420695f2d8099fe!2sPrestige%20Industries!5e0!3m2!1sen!2sin!4v1714995421985!5m2!1sen!2sin" width="100%" height="450" style={{"border":0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className='formmaindiv'>
                     <div className='cotactdivchild'>
                         <div><i className="ri-user-fill iconsizecontact"></i><span className='contactusspan'><strong>Mr. Mohit Kalra :</strong> +91-9999196748</span></div>

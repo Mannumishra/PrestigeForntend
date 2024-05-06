@@ -16,12 +16,13 @@ const Footer = () => {
 
                 <Link to="/" style={{ color: "white" }} className='textdeco'><p>Home</p></Link>
                 <Link to="/contact" style={{ color: "white" }}><p>Contact us</p></Link>
-                <p>Site Map</p>
+                <Link to="/#" style={{ color: "white" }}><p>Careers</p></Link>
+                {/* <p>Site Map</p> */}
               </div>
               <div>
                 <Link to="/about" style={{ color: "white" }}><p>About</p></Link>
                 <Link to="/infra" style={{ color: "white" }}><p>Infrastructure</p></Link>
-                <Link to="/#" style={{ color: "white" }}><p>Careers</p></Link>
+                
                 {/* <p>Site Map</p> */}
               </div>
             </div>
