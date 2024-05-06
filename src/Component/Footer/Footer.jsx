@@ -16,7 +16,7 @@ const Footer = () => {
 
                 <Link to="/" style={{ color: "white" }} className='textdeco'><p>Home</p></Link>
                 <Link to="/contact" style={{ color: "white" }}><p>Contact us</p></Link>
-                <Link to="/#" style={{ color: "white" }}><p>Careers</p></Link>
+                <Link to="/career" style={{ color: "white" }}><p>Careers</p></Link>
                 {/* <p>Site Map</p> */}
               </div>
               <div>
