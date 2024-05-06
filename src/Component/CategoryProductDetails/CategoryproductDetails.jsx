@@ -53,7 +53,7 @@ const CategoryproductDetails = () => {
             <div className="container">
                 <div className="row">
                 <div className="col-md-6">
-                    <p className='Headingcategory'>What is the <span style={{ color: "blue" }}>{data.categoryname}</span>?</p>
+                    {/* <p className='Headingcategory'>What is the <span style={{ color: "blue" }}>{data.categoryname}</span>?</p> */}
                     <p className='questionanswer'>{data.description}</p>
                     </div>
                     <div className="col-md-6">
@@ -64,7 +64,7 @@ const CategoryproductDetails = () => {
                  
                 </div>
             </div>
-            <div className='mb-4'>
+            {/* <div className='mb-4'>
                 <p className='Headingcategory'>Related Product <span style={{ color: "blue" }}>{data.categoryname}</span></p>
                 <div className='cateproductstyle' style={{}}>
                 {
@@ -83,7 +83,7 @@ const CategoryproductDetails = () => {
                     )
                 }
                  </div>
-            </div>
+            </div> */}
         </>
     )
 }

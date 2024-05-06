@@ -2,6 +2,15 @@ import React, { useEffect, useState } from 'react'
 import './style.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 const Home = () => {
   const [cateprod, setCateprod] = useState([])
 
@@ -211,6 +220,103 @@ const Home = () => {
               </div>
             </form>
           </div>
+        </div>
+      </section>
+      <section>
+        <div style={{ padding: "50px" }}>
+          <Swiper
+            // install Swiper modules
+            modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={20}
+            slidesPerView={6}
+            navigation
+            // pagination={{ clickable: true }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            // scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              480: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 1,
+              },
+              992: {
+                slidesPerView: 5,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div style={{ position: "relative" }}>
+                <img src="../image/vseg2.jpg" alt="" className='insfrastuctureimages' />
+                <div className='swiperdiv'><p className='textswiper'>3 WHEELERS</p></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div style={{ position: "relative" }}>
+                <img src="../image/vseg3.jpg" alt="" className='insfrastuctureimages' />
+                <div className='swiperdiv'><p className='textswiper'>PASSENGER VEHICLES</p></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div style={{ position: "relative" }}>
+                <img src="../image/vseg4.jpg" alt="" className='insfrastuctureimages' />
+                <div className='swiperdiv'><p className='textswiper'>INDUSTRIAL & RAILWAYS</p></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div style={{ position: "relative" }}>
+                <img src="../image/vseg5.jpg" alt="" className='insfrastuctureimages' />
+                <div className='swiperdiv'><p className='textswiper'>ELECTRIC VEHICLES</p></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div style={{ position: "relative" }}>
+                <img src="../image/vseg6.jpg" alt="" className='insfrastuctureimages' />
+                <div className='swiperdiv'><p className='textswiper'>COMMERCIAL VEHICLES</p></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div style={{ position: "relative" }}>
+                <img src="../image/vseg7.jpg" alt="" className='insfrastuctureimages' />
+                <div className='swiperdiv'><p className='textswiper'>OFF ROAD VEHICLES</p></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div style={{ position: "relative" }}>
+                <img src="../image/vseg8.jpg" alt="" className='insfrastuctureimages' />
+                <div className='swiperdiv'><p className='textswiper'>TRACTORS</p></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div style={{ position: "relative" }}>
+                <img src="../image/vseg1.jpg" alt="" className='insfrastuctureimages' />
+                <div className='swiperdiv'><p className='textswiper'>2 WHEELERS</p></div>
+              </div>
+            </SwiperSlide>
+            {/* <SwiperSlide>
+                            <img src="../image/vseg4.jpg" alt="" className='insfrastuctureimages' />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="../image/vseg5.jpg" alt="" className='insfrastuctureimages' />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="../image/vseg6.jpg" alt="" className='insfrastuctureimages' />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="../image/vseg7.jpg" alt="" className='insfrastuctureimages' />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="../image/vseg8.jpg" alt="" className='insfrastuctureimages' />
+                        </SwiperSlide> */}
+          </Swiper>
         </div>
       </section>
     </>
