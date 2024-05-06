@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './About.css'
 import { Link } from 'react-router-dom'
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 import axios from 'axios'
 const AboutUs = () => {
     const [data, setData] = useState([])
@@ -71,6 +80,80 @@ const AboutUs = () => {
                             </ul>
                         </div>
                     </div>
+                </div>
+                <div style={{ padding: "50px" }}>
+                    <p className='linecardtext'>People who Believe in Us</p>
+                    <p className='linecardheading'>Line Card</p>
+                    <Swiper
+                        // install Swiper modules
+                        modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+                        spaceBetween={20}
+                        slidesPerView={4}
+                        navigation
+                        // pagination={{ clickable: true }}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        // scrollbar={{ draggable: true }}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                        breakpoints={{
+                            320: {
+                                slidesPerView: 1,
+                            },
+                            480: {
+                                slidesPerView: 1,
+                            },
+                            768: {
+                                slidesPerView: 1,
+                            },
+                            992: {
+                                slidesPerView: 5,
+                            },
+                        }}
+                    >
+                        <SwiperSlide>
+                            <div style={{ position: "relative" }}>
+                                <img src="../image/download-1.png" alt="" className='insfrastuctureimages' />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/download-2.png" alt="" className='insfrastuctureimages' />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/download-3.png" alt="" className='insfrastuctureimages' />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/download.png" alt="" className='insfrastuctureimages' />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/images.png" alt="" className='insfrastuctureimages' />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/kum.jpg" alt="" className='insfrastuctureimages' />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/Molex_Logo.png" alt="" className='insfrastuctureimages' />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/1559876518877.jpg" alt="" className='insfrastuctureimages' />
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
             </section>
         </>

@@ -39,15 +39,15 @@ const Contact = () => {
         <> <div style={{ marginTop: 160 }}></div>
             <section className='contactPage'>
                 <p className='mainheading'>Prestige Industries</p>
-                <div className='divabloutredirect'><Link style={{ textDecoration: "none", color: "#333" }}>Home</Link> > Infrastructure</div>
+                <div className='divabloutredirect'><Link style={{ textDecoration: "none", color: "#333" }}>Home</Link> > Contact Us</div>
                 <div className='formmaindiv'>
                     <div className='cotactdivchild'>
                         <div><i className="ri-user-fill iconsizecontact"></i><span className='contactusspan'><strong>Mr. Mohit Kalra :</strong> +91-9999196748</span></div>
-                        <div><i className="ri-user-fill iconsizecontact"></i><span className='contactusspan'><strong>Mr. S. S. Kalra :</strong> +91-9999196748</span></div>
-                        <div><i className="ri-user-fill iconsizecontact"></i><span className='contactusspan'><strong>Mr. Rohit Kalra :</strong> +91-9999196748</span></div>
+                        <div><i className="ri-user-fill iconsizecontact"></i><span className='contactusspan'><strong>Mr. S. S. Kalra :</strong> +91-9313357330</span></div>
+                        <div><i className="ri-user-fill iconsizecontact"></i><span className='contactusspan'><strong>Mr. Rohit Kalra :</strong> +91-9999196749</span></div>
                         <div><i className="ri-map-pin-line iconsizecontact"></i><span className='contactusspan'>O-173, Sector-3, DSIIDC Industrial Park, Bawana, Bawana, Delhi, India</span></div>
                         <div><i className="ri-mail-line iconsizecontact"></i><span className='contactusspan'>Info@prestigeindustries.co.in</span> </div>
-                        <div><i className="ri-mail-line iconsizecontact"></i><span className='contactusspan'>Careers@prestigeindustries.co.in</span> </div>
+                        <div><i className="ri-mail-line iconsizecontact"></i><span className='contactusspan'>prestige.industries@rediffmail.com</span> </div>
                     </div>
                     <div className='contactformdiv'>
                         <h5>Send us a <span style={{ color: "#00abed" }}>Message</span></h5>

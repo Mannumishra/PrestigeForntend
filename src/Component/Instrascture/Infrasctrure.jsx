@@ -12,8 +12,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import axios from 'axios';
 const Infrasctrure = () => {
-    const [data,setData] = useState([])
-    const getApiData = async()=>{
+    const [data, setData] = useState([])
+    const getApiData = async () => {
         try {
             let res = await axios.get("https://prestigebackend.onrender.com/api/category")
             setData(res.data.data)
@@ -21,18 +21,18 @@ const Infrasctrure = () => {
             console.log(error);
         }
     }
-    useEffect(()=>{
+    useEffect(() => {
         window.scrollTo({
-            top:0,
-            behavior:"smooth"
+            top: 0,
+            behavior: "smooth"
         })
     })
-    useEffect(()=>{
-getApiData()
-    },[])
+    useEffect(() => {
+        getApiData()
+    }, [])
     return (
         <>
-         <div style={{marginTop:160}}></div>
+            <div style={{ marginTop: 160 }}></div>
             <section>
                 <div className="mainaboutdiv">
                     <div className="childabout1">
@@ -61,8 +61,8 @@ getApiData()
                             <ul class="list-group">
                                 <li class="list-group-item headingtextside">Products</li>
                                 {
-                                    data.map((item,index)=>
-                                        <li class="list-group-item aboutsidetext"><Link to={`/categoryproductdetails/${item._id}`} style={{textDecoration:"none",color:"black"}}>{item.categoryname}</Link></li>
+                                    data.map((item, index) =>
+                                        <li class="list-group-item aboutsidetext"><Link to={`/categoryproductdetails/${item._id}`} style={{ textDecoration: "none", color: "black" }}>{item.categoryname}</Link></li>
                                     )
                                 }
                             </ul>
@@ -78,9 +78,9 @@ getApiData()
                 <div style={{ padding: "50px" }}>
                     <Swiper
                         // install Swiper modules
-                        modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y ]}
-                        spaceBetween={50}
-                        slidesPerView={4}
+                        modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+                        spaceBetween={20}
+                        slidesPerView={6}
                         navigation
                         // pagination={{ clickable: true }}
                         autoplay={{
@@ -101,46 +101,73 @@ getApiData()
                                 slidesPerView: 1,
                             },
                             992: {
-                                slidesPerView: 2,
+                                slidesPerView: 5,
                             },
                         }}
                     >
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18569_20201123134106.jpeg" alt="" className='insfrastuctureimage' />
+                            <div style={{ position: "relative" }}>
+                                <img src="../image/vseg2.jpg" alt="" className='insfrastuctureimages' />
+                                <div className='swiperdiv'><p className='textswiper'>3 WHEELERS</p></div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18570_20201123134120.jpeg" alt="" className='insfrastuctureimage' />
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/vseg3.jpg" alt="" className='insfrastuctureimages' />
+                                <div className='swiperdiv'><p className='textswiper'>PASSENGER VEHICLES</p></div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18572_20201123134130.jpeg" alt="" className='insfrastuctureimage' />
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/vseg4.jpg" alt="" className='insfrastuctureimages' />
+                                <div className='swiperdiv'><p className='textswiper'>INDUSTRIAL & RAILWAYS</p></div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18569_20201123134106.jpeg" alt="" className='insfrastuctureimage' />
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/vseg5.jpg" alt="" className='insfrastuctureimages' />
+                                <div className='swiperdiv'><p className='textswiper'>ELECTRIC VEHICLES</p></div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18570_20201123134120.jpeg" alt="" className='insfrastuctureimage' />
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/vseg6.jpg" alt="" className='insfrastuctureimages' />
+                                <div className='swiperdiv'><p className='textswiper'>COMMERCIAL VEHICLES</p></div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18572_20201123134130.jpeg" alt="" className='insfrastuctureimage' />
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/vseg7.jpg" alt="" className='insfrastuctureimages' />
+                                <div className='swiperdiv'><p className='textswiper'>OFF ROAD VEHICLES</p></div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18569_20201123134106.jpeg" alt="" className='insfrastuctureimage' />
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/vseg8.jpg" alt="" className='insfrastuctureimages' />
+                                <div className='swiperdiv'><p className='textswiper'>TRACTORS</p></div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18570_20201123134120.jpeg" alt="" className='insfrastuctureimage' />
+                        <div style={{ position: "relative" }}>
+                                <img src="../image/vseg1.jpg" alt="" className='insfrastuctureimages' />
+                                <div className='swiperdiv'><p className='textswiper'>2 WHEELERS</p></div>
+                            </div>
+                        </SwiperSlide>
+                        {/* <SwiperSlide>
+                            <img src="../image/vseg4.jpg" alt="" className='insfrastuctureimages' />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18572_20201123134130.jpeg" alt="" className='insfrastuctureimage' />
+                            <img src="../image/vseg5.jpg" alt="" className='insfrastuctureimages' />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18569_20201123134106.jpeg" alt="" className='insfrastuctureimage' />
+                            <img src="../image/vseg6.jpg" alt="" className='insfrastuctureimages' />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18570_20201123134120.jpeg" alt="" className='insfrastuctureimage' />
+                            <img src="../image/vseg7.jpg" alt="" className='insfrastuctureimages' />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://dyimg77.exportersindia.com/catalog-gallery/gallery_18572_20201123134130.jpeg" alt="" className='insfrastuctureimage' />
-                        </SwiperSlide>
+                            <img src="../image/vseg8.jpg" alt="" className='insfrastuctureimages' />
+                        </SwiperSlide> */}
                     </Swiper>
                 </div>
             </section>

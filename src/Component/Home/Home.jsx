@@ -13,12 +13,12 @@ const Home = () => {
       console.log(error);
     }
   }
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo({
-        top:0,
-        behavior:"smooth"
+      top: 0,
+      behavior: "smooth"
     })
-},[])
+  }, [])
   useEffect(() => {
     getApiData()
   }, [])
@@ -28,10 +28,10 @@ const Home = () => {
       <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="https://catalog.wlimg.com/1/2990960/other-images/378606.jpg" className="d-block w-100" alt="..." />
+            <img src="../image/automotive connectors.jpg" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src="https://catalog.wlimg.com/1/2990960/other-images/378605.jpg" className="d-block w-100" alt="..." />
+            <img src="../image/Wiring harness.jpg" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
             <img src="https://catalog.wlimg.com/1/2990960/other-images/378607.jpg" className="d-block w-100" alt="..." />
@@ -101,7 +101,7 @@ const Home = () => {
               <div className='ProductRenagechild'>
                 <div className='imagerange'>
                   <div className="img-parent">
-                    <Link to={`/categoryproductdetails/${item._id}`}> <img src={item.image} alt="" style={{ height: 230 ,width:"90%" }} /></Link>
+                    <Link to={`/categoryproductdetails/${item._id}`}> <img src={item.image} alt="" style={{ height: 230, width: "90%" }} /></Link>
                   </div>
                 </div>
                 <div className='secondchild'>
@@ -176,7 +176,7 @@ const Home = () => {
             <h2>HOW TO FIND US</h2>
             <div><i className="ri-user-fill size"></i><span className='spantext'>Mr. Mohit Kalra </span></div>
             <div><i className="ri-map-pin-line size"></i><span className='spantext'>O-173, Sector-3, DSIIDC Industrial Park, Bawana, Bawana, Delhi, India</span></div>
-            <div><i className="ri-phone-line size"></i><span className='spantext'>08048779557</span></div>
+            <div><i className="ri-phone-line size"></i><span className='spantext'>9999196748</span></div>
             <div><i className="ri-mail-line size"></i><span className='spantext'>prestige.industries@rediffmail.com </span></div>
           </div>
           <div>

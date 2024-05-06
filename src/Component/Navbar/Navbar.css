@@ -1,5 +1,20 @@
 .fssize {
-    font-size: 30px;
+    font-size: 40px;
+    color: black;
+}
+
+.mainnavbar {
+    position: absolute;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-Index: 999;
+    padding: 10px 15px;
+}
+
+.pdfcolor {
+    height: 40px;
+    margin-top: -20px;
 }
 
 .parent-list {
@@ -76,7 +91,7 @@
 }
 
 .navbardivfirst {
-    padding: 10px;
+    padding: 5px 20px;
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -123,6 +138,7 @@
 .nav-link.dropdown-toggle::after {
     display: none;
 }
+
 @media screen and (max-width: 768px) {
     .parent-list:hover .child-list {
         display: none;
@@ -131,7 +147,9 @@
     .nav-item.dropdown {
         position: relative;
     }
-
+    .mainnavbar {
+        top: 40px;
+    }
     .nav-link.dropdown-toggle::after {
         display: inline-block;
         width: 0;
@@ -158,16 +176,20 @@
     .icon-container {
         display: none;
     }
-  
+
 }
+
 @media only screen and (max-width: 600px) {
     .fssize {
-        font-size: 15px;
+        font-size: 20px;
+    }
+
+    .pdfcolor {
+        height: 20px;
+        margin-top: -5px;
     }
 
     .navbardivfirst {
-        /* margin-left: 10px; */
-        /* margin-right: 10px; */
         display: flex;
         justify-content: space-between;
     }
@@ -236,7 +258,8 @@
     .nav-link.dropdown-toggle::after {
         display: none;
     }
-    .call{
+
+    .call {
         display: none !important;
     }
 }

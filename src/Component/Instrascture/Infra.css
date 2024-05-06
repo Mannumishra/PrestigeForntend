@@ -6,12 +6,40 @@
     padding: 10px;
     margin-bottom: 20px;
 }
-.Infrastructurepage{
+
+.Infrastructurepage {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
+
+.insfrastuctureimage {
+    width: 100%;
+}
+
+.insfrastuctureimages {
+    width: 100%;
+    height: 250px;
+}
+
+.swiperdiv {
+    background-color: #000000ab;
+    position: absolute;
+    bottom: 1px;
+    color: white;
+    width: 100%;
+}
+.textswiper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 @media only screen and (max-width: 600px) {
-    
+
 }
