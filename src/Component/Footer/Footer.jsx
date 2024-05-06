@@ -33,10 +33,11 @@ const Footer = () => {
               <div>
                 <Link style={{ color: "white" }}>  <p>Wiring Harness</p></Link>
                 <Link style={{ color: "white" }}>  <p>Wiring Assembly</p></Link>
-              </div>
-              <div>
                 <Link style={{ color: "white" }}><p>Automotive Connector</p></Link>
               </div>
+              {/* <div>
+              
+              </div> */}
             </div>
           </div>
           <div className=''>
