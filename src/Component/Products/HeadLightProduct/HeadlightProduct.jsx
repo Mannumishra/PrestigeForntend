@@ -72,7 +72,7 @@ const HeadlightProduct = () => {
           </div>
           <div className='firstdivsecchild'>
             <p className='seconddivheading'>{data.subcategoryname}</p>
-            <button className='btnfirst'>Get Best Price</button>
+            {/* <button className='btnfirst'>Get Best Price</button> */}
             <div className="divfirstclass">
               <div className='headtext'>Business Type</div>
               <div className='headtextnext'>{data.businesstype}</div>
