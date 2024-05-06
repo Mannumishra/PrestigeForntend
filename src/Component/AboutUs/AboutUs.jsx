@@ -82,7 +82,7 @@ const AboutUs = () => {
                     </div>
                 </div>
                 <div style={{ padding: "50px" }}>
-                    <p className='linecardtext'>People who Believe in Us</p>
+                    {/* <p className='linecardtext'>People who Believe in Us</p> */}
                     <p className='linecardheading'>Line Card</p>
                     <Swiper
                         // install Swiper modules
