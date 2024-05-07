@@ -10,7 +10,7 @@ const CategoryproductDetails = () => {
 
     const getApidata = async () => {
         try {
-            let res = await axios.get("https://www.api.prestigeindustries.co.in/api/category/" + _id)
+            let res = await axios.get("https://api.prestigeindustries.co.in/api/category/" + _id)
             setData(res.data.data)
             // console.log(res);
         } catch (error) {
@@ -19,7 +19,7 @@ const CategoryproductDetails = () => {
     }
     const getApiProduct = async () => {
         try {
-            let res = await axios.get("https://www.api.prestigeindustries.co.in/api/product")
+            let res = await axios.get("https://api.prestigeindustries.co.in/api/product")
             console.log(res);
             setProduct(res.data.data)
         } catch (error) {

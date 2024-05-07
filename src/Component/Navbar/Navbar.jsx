@@ -29,7 +29,7 @@ const Navbar = () => {
 
 
     const getApiCategoryData = async () => {
-        let res = await axios.get("https://www.api.prestigeindustries.co.in/api/category")
+        let res = await axios.get("https://api.prestigeindustries.co.in/api/category")
         // console.log(res);
         console.log(res)
         setData(res.data.data)

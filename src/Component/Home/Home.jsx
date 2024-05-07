@@ -16,7 +16,7 @@ const Home = () => {
 
   const getApiData = async () => {
     try {
-      let res = await axios.get("https://www.api.prestigeindustries.co.in/api/category")
+      let res = await axios.get("https://api.prestigeindustries.co.in/api/category")
       setCateprod(res.data.data)
     } catch (error) {
       console.log(error);
