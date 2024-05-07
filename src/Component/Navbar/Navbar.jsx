@@ -49,7 +49,7 @@ const Navbar = () => {
                     <div className='icon-containerdiv'> <i className="ri-message-2-line fssizeee"></i></div><span className='navbaespantext'>Send sms</span>
                 </div>
                 <div>
-                    <img src="../image/iso.jpg" alt="" className='isoimgae' />
+                    <img src="../image/isologo2.png" alt="" className='isoimgae' />
                     <Link to="https://www.facebook.com/prestigeindustriesofficial" style={{ textDecoration: "none" }}><i className="ri-facebook-box-fill fssize" style={{ color: "#1877F2" }}></i></Link>
                     <Link to="https://www.linkedin.com/company/prestige-industries" style={{ textDecoration: "none" }}><i class="ri-linkedin-box-fill fssize" style={{ color: "#0077b5" }}></i></Link>
                     <Link to="https://instagram.com/prestigeindustries_official?igshid=10tr8y2m3eigk" style={{ textDecoration: "none" }}><i className="ri-instagram-line fssize" style={{ color: "#ff5a5f" }}></i></Link>
@@ -93,6 +93,9 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/contact" onClick={closeNavbarOnMobile}>Contact us</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/career" onClick={closeNavbarOnMobile}>Career</Link>
                             </li>
                         </ul>
                     </div>

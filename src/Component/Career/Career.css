@@ -47,4 +47,7 @@ border-radius: 5px;
         font-size: 18px;
         text-align: center;
     }
+    .careerpara{
+        text-align: justify;
+    }
 }
