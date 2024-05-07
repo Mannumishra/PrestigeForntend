@@ -20,7 +20,7 @@ const Contact = () => {
     const postdata = async (e) => {
         e.preventDefault()
         try {
-            let res = await axios.post("https://prestigebackend.onrender.com/api/contact", data)
+            let res = await axios.post("https://www.api.prestigeindustries.co.in/api/contact", data)
             if (res.status === 200) {
                 toast.success("Your Contact us save successfully !!!!")
               window.location.reload()

@@ -8,7 +8,7 @@ const HeadlightProduct = () => {
   const [data, setData] = useState({})
   const getApiData = async () => {
     try {
-      let res = await axios.get("https://prestigebackend.onrender.com/api/product/"+_id)
+      let res = await axios.get("https://www.api.prestigeindustries.co.in/api/product/"+_id)
       console.log(res);
       setData(res.data.data)
     } catch (error) {

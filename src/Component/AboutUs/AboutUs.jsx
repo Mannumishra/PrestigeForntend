@@ -15,7 +15,7 @@ const AboutUs = () => {
     const [data, setData] = useState([])
     const getApiData = async () => {
         try {
-            let res = await axios.get("https://prestigebackend.onrender.com/api/category")
+            let res = await axios.get("https://www.api.prestigeindustries.co.in/api/category")
             setData(res.data.data)
         } catch (error) {
             console.log(error);
