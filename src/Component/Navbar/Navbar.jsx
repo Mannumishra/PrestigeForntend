@@ -49,13 +49,14 @@ const Navbar = () => {
                     <div className='icon-containerdiv'> <i className="ri-message-2-line fssizeee"></i></div><span className='navbaespantext'>Send sms</span>
                 </div>
                 <div>
+                    <img src="../image/iso.jpg" alt="" className='isoimgae' />
                     <Link to="https://www.facebook.com/prestigeindustriesofficial" style={{ textDecoration: "none" }}><i className="ri-facebook-box-fill fssize" style={{ color: "#1877F2" }}></i></Link>
-                    <Link to="https://www.linkedin.com/company/prestige-industries" style={{ textDecoration: "none" }}><i class="ri-linkedin-box-fill fssize" style={{ color: "#0077b5"}}></i></Link>
+                    <Link to="https://www.linkedin.com/company/prestige-industries" style={{ textDecoration: "none" }}><i class="ri-linkedin-box-fill fssize" style={{ color: "#0077b5" }}></i></Link>
                     <Link to="https://instagram.com/prestigeindustries_official?igshid=10tr8y2m3eigk" style={{ textDecoration: "none" }}><i className="ri-instagram-line fssize" style={{ color: "#ff5a5f" }}></i></Link>
-                    <a href="https://drive.google.com/drive/folders/143X9MYyqBPiUUnve0ZbVxlQGUsXCXuTk" target='_blank'><img src="./image/file-pdf-2-fill.png" alt="" className='pdfcolor' style={{}} /></a>
+                   
                 </div>
             </div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light mainnavbar" style={{ }}>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light mainnavbar" style={{}}>
                 <div>
                     <Link to="/"> <img src="https://catalog.wlimg.com/1/2990960/other-images/12569-comp-image.png" alt="" className='navbarimage' /></Link>
                 </div>

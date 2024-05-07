@@ -9,7 +9,7 @@
     align-items: center;
 }
 .isoimgae{
-    height: 100px;
+    height: 50px;
 }
 .heading {
     text-align: center;
@@ -20,6 +20,11 @@
 }
 
 .paragraph {
+    text-align: start;
+    letter-spacing: 1px;
+}
+.paragraphh {
+    margin-top: -18px;
     text-align: start;
     letter-spacing: 1px;
 }
@@ -277,6 +282,11 @@
     }
     
 .paragraph {
+    text-align: start;
+    letter-spacing: 0px;
+    font-size: 13px;
+}
+.paragraphh {
     text-align: start;
     letter-spacing: 0px;
     font-size: 13px;

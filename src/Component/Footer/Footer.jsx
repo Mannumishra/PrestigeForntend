@@ -6,7 +6,9 @@ const Footer = () => {
   return (
     <>
       <section className='footersection'>
-        <div style={{ position: "absolute", right: 10, bottom: 130, cursor: "pointer", position: "fixed", zIndex: 999 }}>
+        
+        <div style={{ position: "absolute", right: 40, bottom: 85, cursor: "pointer", position: "fixed", zIndex: 999 }}>
+        <a href="https://drive.google.com/drive/folders/143X9MYyqBPiUUnve0ZbVxlQGUsXCXuTk" target='_blank'><img src="./image/file-pdf-2-fill.png" alt="" className='pdfcolor' style={{}} /></a>
         </div>
         <div className='footersecondmain'>
           <div>

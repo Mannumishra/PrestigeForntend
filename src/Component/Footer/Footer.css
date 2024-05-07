@@ -2,7 +2,9 @@
     background: #333333 url(//catalog.wlimg.com/templates-images/12569/12570/footer_pattern.png);
     color: white;
 }
-
+.pdfcolor{
+    height: 50px;
+}
 .floating {
     position: fixed;
     width: 60px;
