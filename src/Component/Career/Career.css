@@ -9,9 +9,14 @@
 .careerimg{
     height: 200px;
     margin-left: 50px;
-}.sendcv{
+}
+.careerimgg{
+    height: 200px;
+    margin-left: 50px;
+}
+.sendcv{
     height: 100px;
-    width: 50%;
+    width: 100%;
     background-color: aliceblue;
     display: flex;
     justify-content: center;
@@ -29,4 +34,17 @@
     color: white;
 border-radius: 5px;
 
+}
+@media screen and (max-width: 768px) {
+    .sendcv {
+        width: 100%;
+    }
+    .careerimgg {
+        height: 171px;
+        margin-right: 20px;
+    }
+    .careerheading{
+        font-size: 18px;
+        text-align: center;
+    }
 }

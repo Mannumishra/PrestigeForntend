@@ -3,7 +3,14 @@
     margin-left: 50px;
     margin-right: 50px;
 }
-
+.isologo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.isoimgae{
+    height: 100px;
+}
 .heading {
     text-align: center;
     font-size: 24px;

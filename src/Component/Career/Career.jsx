@@ -48,24 +48,16 @@ const Career = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <img src="../image/career3.jpg" alt="" className='careerimg' />
+                        <img src="../image/career3.jpg" alt="" className='careerimgg' />
                     </div>
 
                 </div>
+              
                 <div className="row mt-4">
-                    <div className="col-md-6">
-                        <img src="../image/career4.avif" alt="" className='careerimg' />
+                <div className="col-md-6">
+                        <img src="../image/career5.jpg" alt="" className='careerimg' />
                     </div>
-                    <div className="col-md-6">
-                        <div className="careerheading">
-                            Industry Leadership
-                        </div>
-                        <div className="careerpara">
-                            Joining Prestige Industries means becoming part of a team that is recognized as a leader in the automotive wiring harness industry. You'll have the chance to work with state-of-the-art technology and collaborate on projects that are at the forefront of automotive innovation.
-                        </div>
-                    </div>
-                </div>
-                <div className="row mt-4">
+               
                     <div className="col-md-6">
                         <div className="careerheading">
                             Collaborative Environmen
@@ -74,10 +66,7 @@ const Career = () => {
                             Collaboration is key to our success at Prestige Industries. You'll have the opportunity to work alongside talented individuals from diverse backgrounds who share a passion for excellence and a commitment to delivering exceptional results for our customers.
                         </div>
                     </div>
-                    <div className="col-md-6">
-                        <img src="../image/career5.jpg" alt="" className='careerimg' />
                     </div>
-                </div>
                 <div className="row mt-5 mb-5">
                     <div className="col-md-12">
                         <div className="careerheading text-center">

@@ -83,7 +83,7 @@ const AboutUs = () => {
                 </div>
                 <div style={{ padding: "50px" }}>
                     {/* <p className='linecardtext'>People who Believe in Us</p> */}
-                    <p className='linecardheading'>Line Card</p>
+                    <p className='linecardheading'>Automotive connector in which we deal</p>
                     <Swiper
                         // install Swiper modules
                         modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}

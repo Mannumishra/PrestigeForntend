@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import "./Infra.css"
 import { Link } from 'react-router-dom'
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+// import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+// import 'swiper/css/scrollbar';
 import axios from 'axios';
 const Infrasctrure = () => {
     const [data, setData] = useState([])
@@ -75,19 +75,16 @@ const Infrasctrure = () => {
                         </div>
                     </div>
                 </div>
-                <div style={{ padding: "50px" }}>
+                {/* <div style={{ padding: "50px" }}>
                     <Swiper
-                        // install Swiper modules
                         modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={20}
                         slidesPerView={6}
                         navigation
-                        // pagination={{ clickable: true }}
                         autoplay={{
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
-                        // scrollbar={{ draggable: true }}
                         onSwiper={(swiper) => console.log(swiper)}
                         onSlideChange={() => console.log('slide change')}
                         breakpoints={{
@@ -153,23 +150,9 @@ const Infrasctrure = () => {
                                 <div className='swiperdiv'><p className='textswiper'>2 WHEELERS</p></div>
                             </div>
                         </SwiperSlide>
-                        {/* <SwiperSlide>
-                            <img src="../image/vseg4.jpg" alt="" className='insfrastuctureimages' />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src="../image/vseg5.jpg" alt="" className='insfrastuctureimages' />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src="../image/vseg6.jpg" alt="" className='insfrastuctureimages' />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src="../image/vseg7.jpg" alt="" className='insfrastuctureimages' />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src="../image/vseg8.jpg" alt="" className='insfrastuctureimages' />
-                        </SwiperSlide> */}
+                       
                     </Swiper>
-                </div>
+                </div> */}
             </section>
         </>
     )

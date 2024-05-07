@@ -58,8 +58,11 @@ const Home = () => {
       {/* <div className=""> */}
       <div className="WELCOMEsection">
         <p className='heading'> WELCOME TO OUR WEBSITE</p>
-        <p className='paragraph'>We <strong>Prestige Industries</strong> An ISO 9001:2015 certified company. we are manufacturer of wiring harness for OEMs.We are capable to manufacture any type of automotive wiring harness Which includes : <br />
-          Body wiring harness ( Power Window Wiring harness, Door Lock harness, Dashboard harness, Interior Electrical Components harness and Others ) Chassis wiring harness  (Front Wiring Harness ,Rear wiring Harness, Main wiring Harness and others) Engine Wiring harness  (Cruise Control Systems harness,  Anti-Lock Braking Systems Wiring harness, Speed Sensor wiring harness, Fuel Injection Systems wiring harness,  Others) , Horn wiring harness, stereo wiring harness, Sensors wiring harness. <br />
+        <p className='paragraph'>We <strong>Prestige Industries</strong> An ISO 9001:2015 certified company. we are manufacturer of wiring harness for OEMs.We are capable to manufacture any type of automotive wiring harness Which includes : </p>
+         <div className='isologo'>
+         <img src="../image/iso.jpg" alt=""className='isoimgae' />
+         </div>
+         <p className='paragraph'> Body wiring harness ( Power Window Wiring harness, Door Lock harness, Dashboard harness, Interior Electrical Components harness and Others ) Chassis wiring harness  (Front Wiring Harness ,Rear wiring Harness, Main wiring Harness and others) Engine Wiring harness  (Cruise Control Systems harness,  Anti-Lock Braking Systems Wiring harness, Speed Sensor wiring harness, Fuel Injection Systems wiring harness,  Others) , Horn wiring harness, stereo wiring harness, Sensors wiring harness. <br />
           And competent to make any other wiring harness available as per the given drawings and specifications: Moreover we cater to the demand for bulk orders too with swiftness and faultlessness'. </p>
       </div>
       <section>
